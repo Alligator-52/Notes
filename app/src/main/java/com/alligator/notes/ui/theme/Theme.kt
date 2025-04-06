@@ -9,12 +9,15 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Color.White,
+    background = DarkGray,
+    onBackground = Color.White,
+    surface = LightBlue,
+    onSurface = DarkGray
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -32,6 +35,7 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color(0xFF1C1B1F),
     */
 )
+
 
 @Composable
 fun NotesTheme(
@@ -51,8 +55,9 @@ fun NotesTheme(
     }
 
     MaterialTheme(
-        colorScheme = colorScheme,
+        colorScheme = DarkColorScheme,
         typography = Typography,
+        shapes = Shapes,
         content = content
     )
 }
